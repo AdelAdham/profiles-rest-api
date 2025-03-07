@@ -39,10 +39,10 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    # Django need to have custom model manager for the models
+    # Django need to have custom model manager for its models
     objects = UserProfileManager()
 
-    USERNAME_FIELD = 'email'  # class unoque identifier
+    USERNAME_FIELD = 'email'  # class unique identifier
     REQUIRED_FIELDS = ['name']
 
     def get_full_name():
